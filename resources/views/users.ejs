@@ -1,3 +1,4 @@
+<!-- filepath: c:\Users\henri\unifaat-frontend-aula07-views-ssr-ssg\resources\views\users.ejs -->
 <% layout('./layouts/main') -%>
 
 <main class="container my-4 d-flex align-items-center">
@@ -10,3 +11,15 @@
     </div>
   </div>
 </main>
+
+<!-- Listagem de usuários -->
+<section class="container my-4">
+  <h2 class="mb-3">Lista de Usuários</h2>
+  <ul class="list-group">
+    <% for (const usuario of users) { %>
+      <li class="list-group-item">
+        <strong><%= usuario.name %></strong> - <%= usuario.email %>
+      </li>
+    <% } %>
+  </ul>
+</section>
